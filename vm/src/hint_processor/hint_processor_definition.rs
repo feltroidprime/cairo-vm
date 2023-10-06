@@ -13,6 +13,7 @@ use crate::vm::vm_core::VirtualMachine;
 
 use super::builtin_hint_processor::builtin_hint_processor_definition::HintProcessorData;
 use felt::Felt252;
+use serde::{Serialize, Deserialize};
 
 pub trait HintProcessorLogic {
     //Executes the hint which's data is provided by a dynamic structure previously created by compile_hint
@@ -75,7 +76,7 @@ fn get_ids_data(
     Ok(ids_data)
 }
 
-#[derive(Debug, PartialEq, Eq, Clone)]
+#[derive(Debug, PartialEq, Eq, Clone, Serialize, Deserialize)]
 pub struct HintReference {
     pub offset1: OffsetValue,
     pub offset2: OffsetValue,
