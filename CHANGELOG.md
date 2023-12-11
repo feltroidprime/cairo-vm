@@ -4,6 +4,8 @@
 
 #### Upcoming Changes
 
+* chore: update cairo deps.
+
 * BREAKING: Partially Revert `Optimize trace relocation #906` [#1492](https://github.com/lambdaclass/cairo-vm/pull/1492)
 
   * Remove methods `VirtualMachine::get_relocated_trace`& `VirtualMachine::relocate_trace`.

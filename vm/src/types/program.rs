@@ -111,7 +111,7 @@ pub struct HintsCollection {
 }
 
 impl HintsCollection {
-    pub(crate) fn new(
+    pub fn new(
         hints: &BTreeMap<usize, Vec<HintParams>>,
         program_length: usize,
     ) -> Result<Self, ProgramError> {

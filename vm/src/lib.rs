@@ -53,7 +53,7 @@ pub mod stdlib {
     pub use crate::without_std::*;
 }
 
-pub extern crate felt;
+pub use felt;
 pub mod air_public_input;
 pub mod cairo_run;
 pub mod hint_processor;

@@ -13,9 +13,9 @@ TRACES:=$(patsubst $(CAIRO_1_FOLDER)/%.cairo, $(CAIRO_1_FOLDER)/%.trace, $(CAIRO
 MEMORY:=$(patsubst $(CAIRO_1_FOLDER)/%.cairo, $(CAIRO_1_FOLDER)/%.memory, $(CAIRO_1_PROGRAMS))
 
 deps:
-	git clone https://github.com/starkware-libs/cairo.git \
+	git clone https://github.com/kkrt-labs/cairo \
 	&& cd cairo \
-	&& git checkout v2.3.1 \
+	&& git checkout v2.4.0 \
 	&& cd .. \
 	&& mv cairo/corelib/ . \
 	&& rm -rf cairo/
@@ -30,4 +30,3 @@ clean:
 	rm -rf cairo
 	rm -rf ../cairo_programs/cairo-1-programs/*.memory
 	rm -rf ../cairo_programs/cairo-1-programs/*.trace
-	
